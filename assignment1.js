@@ -8,4 +8,4 @@ if (element) {
 
 let element2 = document.querySelector("div");
 
-element2.innerText="pagal ho gya mai";
+element2.innerText="modified innertext";
