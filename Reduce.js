@@ -6,3 +6,4 @@ let avg=arr1.reduce((result,element)=>{
 })
 
 console.log(avg);
+
