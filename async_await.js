@@ -25,11 +25,10 @@ getalldata();
 
 // for promise (then) case =>
 
-// getdata(6).then(()=>{
-//     console.log("hello world");
-//     getdata(5).then(()=>{
-//         console.log("hello world again");
-//     })
-// })
+getdata(6).then(()=>{
+    console.log("hello world");
+}).then(()=>{
+    getdata(5)
+});
 
 console.log("hi after promise i am here");
