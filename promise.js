@@ -46,13 +46,22 @@ let async2=()=>{
 }
 
 
-console.log("fetching data for async1 ");
-async1().then((msg) => {
-    console.log("message is ", msg);
-    console.log("fetching data for async2 ");
-    async2().then((msg) => {
-        console.log("the data is fetched for async2");
-        console.log("message is ", msg);
-    });
-});
+// console.log("fetching data for async1 ");
+// async1().then((msg) => {
+//     console.log("message is ", msg);
+//     console.log("fetching data for async2 ");
+//     async2().then((msg) => {
+//         console.log("the data is fetched for async2");
+//         console.log("message is ", msg);
+//     });
+// });
 
+// promise chaining
+
+async1().then((res)=>{
+    console.log("async1 is successful");
+
+    return async2();
+}).then((res)=>{
+    console.log("async2 is rejected");
+})
